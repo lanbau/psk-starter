@@ -106,26 +106,26 @@ gulp.task('elements', function() {
 });
 
 // Lint JavaScript
-gulp.task('lint', function() {
-  return gulp.src([
-      'app/scripts/**/*.js',
-      'app/elements/**/*.js',
-      'app/elements/**/*.html',
-      'gulpfile.js'
-    ])
-    .pipe(reload({
-      stream: true,
-      once: true
-    }))
-
-  // JSCS has not yet a extract option
-  .pipe($.if('*.html', $.htmlExtract()))
-  .pipe($.jshint())
-  .pipe($.jscs())
-  .pipe($.jscsStylish.combineWithHintResults())
-  .pipe($.jshint.reporter('jshint-stylish'))
-  .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
-});
+// gulp.task('lint', function() {
+//   return gulp.src([
+//       'app/scripts/**/*.js',
+//       'app/elements/**/*.js',
+//       'app/elements/**/*.html',
+//       'gulpfile.js'
+//     ])
+//     .pipe(reload({
+//       stream: true,
+//       once: true
+//     }))
+//
+//   // JSCS has not yet a extract option
+//   .pipe($.if('*.html', $.htmlExtract()))
+//   .pipe($.jshint())
+//   .pipe($.jscs())
+//   .pipe($.jscsStylish.combineWithHintResults())
+//   .pipe($.jshint.reporter('jshint-stylish'))
+//   .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+// });
 
 // Optimize images
 gulp.task('images', function() {
@@ -238,7 +238,7 @@ gulp.task('clean', function() {
 });
 
 // Watch files for changes & reload
-gulp.task('serve', ['lint', 'styles', 'elements', 'images'], function() {
+gulp.task('serve', [ 'styles', 'elements', 'images'], function() {
   browserSync({
     port: 5000,
     notify: false,
