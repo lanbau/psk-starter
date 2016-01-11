@@ -68,10 +68,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     page('/google-calendar', function() {
       app.route = 'google-calendar';
-    })
+    });
 
-
- 
     // 404
     page('*', function() {
       app.$.toast.text = 'Can\'t find: ' + window.location.href  + '. Redirected you to Home Page';
