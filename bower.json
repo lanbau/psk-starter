@@ -10,7 +10,8 @@
     "polymer": "Polymer/polymer#^1.2.0",
     "paper-menu": "PolymerElements/paper-menu#4fecb43601",
     "iron-list": "PolymerElements/iron-list#~1.1.7",
-    "google-calendar": "GoogleWebComponents/google-calendar#~1.0.1"
+    "google-calendar": "GoogleWebComponents/google-calendar#~1.0.1",
+    "google-signin": "GoogleWebComponents/google-signin#~1.2.0"
   },
   "devDependencies": {
     "web-component-tester": "*"
