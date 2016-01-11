@@ -61,6 +61,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     page('/books', function() {
       app.route = 'books';
     });
+
+    page('/iron-list', function() {
+      app.route = 'iron-list';
+    });
+
+    page('/google-calendar', function() {
+      app.route = 'google-calendar';
+    })
+
+
+ 
     // 404
     page('*', function() {
       app.$.toast.text = 'Can\'t find: ' + window.location.href  + '. Redirected you to Home Page';
@@ -70,7 +81,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     // add #! before urls
     page({
-      hashbang: true
+      hashbang: false
     });
 
   });
